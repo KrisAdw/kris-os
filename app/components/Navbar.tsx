@@ -1,5 +1,5 @@
 import { navIcons, navLinks } from "../constants"
-import Clock from "./Clock"
+import { Clock } from "./index"
 
 const Navbar = () => {
     return (
