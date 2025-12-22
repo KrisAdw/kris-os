@@ -133,16 +133,13 @@ const Welcome = () => {
 
   return (
     <section id="welcome">
-      <p ref={subtitleRef} className="cursor-default py-10">
-        {renderText({ text: "Hey, I'm Kris! I am a", className: "text-3xl font-georama font-thin" })}
+      <p ref={subtitleRef} className="cursor-default lg:py-10">
+        {renderText({ text: "Hey, I'm Kris! I am a", className: "text-lg md:text-xl lg:text-2xl xl:text-3xl font-georama font-thin" })}
       </p>
-      <h1 ref={titleRef} className='cursor-default py-4'>
-        {renderText({ text: "Software Engineer", className: "text-7xl italic font-georama font-bold" })}
+      <h1 ref={titleRef} className='cursor-default mt-5 lg:mt-0 lg:py-4'>
+        {renderText({ text: "Software Engineer", className: "text-3xl md:text-4xl lg:text-5xl xl:text-7xl italic font-georama font-bold" })}
       </h1>
 
-      <div className='small-screen'>
-        <p>This portfolio is designed for desktop/tablet view only</p>
-      </div>
     </section>
   )
 }
