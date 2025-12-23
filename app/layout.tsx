@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { georama, robotoMono } from "./font";
 
 export const metadata: Metadata = {
   title: "Kris's Portfolio",
@@ -27,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${georama.variable} ${robotoMono.variable} antialiased`}>
         {children}
       </body>
     </html>
