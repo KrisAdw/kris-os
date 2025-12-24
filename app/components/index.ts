@@ -3,4 +3,7 @@ import Navbar from "./Navbar";
 import Welcome from "./Welcome";
 import Dock from "./Dock";
 
-export { Clock, Navbar, Welcome, Dock };
+// HOC
+import Hoc from "./hoc/Hoc";
+
+export { Clock, Navbar, Welcome, Dock, Hoc };
