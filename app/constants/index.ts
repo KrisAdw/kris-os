@@ -101,28 +101,36 @@ const blogPosts = [
 
 const techStack = [
   {
+    category: "Languages",
+    items: ["JavaScript", "TypeScript", "Python", "Go", "Solidity"],
+  },
+  {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    items: ["React.js", "Next.js", "Three.js"], // Tambah 3D library kalau lu main di sana
+  },
+  {
+    category: "State Management",
+    items: ["Zustand", "Redux"],
+  },
+  {
+    category: "Styling & UI",
+    items: ["CSS", "Tailwind CSS", "Framer Motion", "Shadcn/UI", "GSAP"], 
   },
   {
     category: "Mobile",
     items: ["React Native", "Expo"],
   },
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
-  },
-  {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express", "Prisma ORM"],
   },
   {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    category: "Database & Auth",
+    items: ["PostgreSQL", "MongoDB", "Supabase", "Firebase"],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    category: "DevOps & Tools",
+    items: ["Git", "GitHub", "Docker", "Vercel"],
   },
 ];
 
