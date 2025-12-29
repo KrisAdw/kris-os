@@ -1,6 +1,6 @@
 'use client'
 
-import { Terminal } from '../windows'
+import { SafariBrowser, Terminal } from '../windows'
 
 /**
  * WindowManager
@@ -17,12 +17,8 @@ const WindowManager = () => {
     return (
         <>
             <Terminal />
+            <SafariBrowser />
             {/* Add more windows here as you build them:
-        <Finder />
-        <Safari />
-        <Photos />
-        <Contact />
-        etc.
       */}
         </>
     )

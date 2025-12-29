@@ -77,25 +77,18 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
+    date: "Dec 12, 2025",
     title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+      "Why I’m Starting to Write a Blog as a Software Engineer",
     image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    link: "https://medium.com/@kriscareer12/why-im-starting-to-write-a-blog-as-a-software-engineer-11f91a46ba62",
   },
   {
     id: 2,
     date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-  },
-  {
-    id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    title: "The Holy Trinity: Mastering the 3 Pillars of Web Development",
+    image: "/images/blog1.png",
+    link: "https://medium.com/@kriscareer12/the-holy-trinity-mastering-the-3-pillars-of-web-development-5fb4b5bb729f?postPublishedType=initial",
   },
 ];
 
