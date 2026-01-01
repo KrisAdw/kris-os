@@ -14,7 +14,7 @@ const navLinks = [
     name: "Resume",
     type: "resume",
   },
-];
+] as const;
 
 const navIcons = [
   {
@@ -107,7 +107,7 @@ const techStack = [
   },
   {
     category: "Styling & UI",
-    items: ["CSS", "Tailwind CSS", "Framer Motion", "Shadcn/UI", "GSAP"], 
+    items: ["CSS", "Tailwind CSS", "Framer Motion", "Shadcn/UI", "GSAP"],
   },
   {
     category: "Mobile",
