@@ -226,7 +226,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "Notaking Apps",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -234,13 +234,13 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "notaking-apps.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
+            "The Notaking Apps is a sleek and modern platform designed for shopping the latest Nike collections.",
             "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
             "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
             "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
@@ -279,7 +279,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "3D Mac Landing Page",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -287,7 +287,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "mac-landing-page.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -332,7 +332,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "TravelWind",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -340,13 +340,13 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "travelwind.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "TravelWind is a fast and convenient way to order meals from your favorite restaurants.",
             "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
             "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
             "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
