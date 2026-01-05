@@ -4,6 +4,7 @@ import Resume from "./Resume"
 import Finder from "./Finder"
 import Text from "./Text"
 import ImageViewer from "./ImageViewer"
+import Contact from "./Contact"
 
 export {
     Terminal,
@@ -12,4 +13,5 @@ export {
     Finder,
     Text,
     ImageViewer,
+    Contact,
 }
