@@ -1,0 +1,50 @@
+'use client'
+
+import { WindowControls } from "../components"
+import WindowWrapper from "../components/hoc/WindowWrapper"
+import useWindowStore from "../store/window"
+import { Location } from "../store/location"
+
+const Text = () => {
+    const { windows } = useWindowStore()
+    const data = windows.txtfile.data as Location | null
+
+    if (!data) return null
+
+    return (
+        <>
+            <div id="window-header" className="relative">
+                <WindowControls target="txtfile" />
+                <h2 className="!w-fit !absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[60%] truncate">
+                    {data.name}
+                </h2>
+            </div>
+            <div className="p-8 h-full overflow-y-auto pb-10 text-black bg-white">
+                {data.image && (
+                    <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                        <img
+                            src={data.image}
+                            alt={data.name}
+                            className="w-full h-full object-cover object-top"
+                        />
+                    </div>
+                )}
+
+                {data.subtitle && (
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{data.subtitle}</h3>
+                )}
+
+                <div className="space-y-4">
+                    {data.description && data.description.map((paragraph: string, index: number) => (
+                        <p key={index} className="text-base leading-7 text-gray-600">
+                            {paragraph}
+                        </p>
+                    ))}
+                </div>
+            </div>
+        </>
+    )
+}
+
+const TextWindow = WindowWrapper(Text, 'txtfile')
+export default TextWindow
