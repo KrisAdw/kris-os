@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Dock, WindowManager } from './components'
+import { Navbar, Welcome, Dock, WindowManager, Desktop } from './components'
 
 import './lib/gsapSetup' // registers Draggable plugin for the whole app
 const Home = () => {
@@ -7,7 +7,8 @@ const Home = () => {
       <Navbar />
       <Welcome />
       <Dock />
-      <WindowManager />
+      <WindowManager />    
+      <Desktop />  
     </main>
   )
 }
