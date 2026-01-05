@@ -15,7 +15,7 @@ const Text = () => {
         <>
             <div id="window-header" className="relative">
                 <WindowControls target="txtfile" />
-                <h2 className="!w-fit !absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[60%] truncate">
+                <h2 className="w-fit! absolute! top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[60%] truncate">
                     {data.name}
                 </h2>
             </div>
