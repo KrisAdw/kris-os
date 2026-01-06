@@ -25,7 +25,6 @@ const Navbar = () => {
                     {navIcons.map(({ id, img }) => (
                         <li
                             key={id}
-                            className="cursor-pointer"
                         >
                             <img src={img} className="icon-hover" alt={`icon-${id}`} />
                         </li>
