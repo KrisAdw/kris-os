@@ -5,17 +5,12 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper-sun.gif");
+  background-image: url("/images/wallpaper-dark.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-family: var(--font-georama);
   transition: background-image 0.5s ease-in-out;
-}
-
-.dark body {
-  background-image: url("/images/wallpaper-dark.gif");
-  /* Changing to a darker wallpaper for dark mode if available, or just keep it */
 }
 
 

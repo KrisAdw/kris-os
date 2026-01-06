@@ -10,24 +10,15 @@ export const metadata: Metadata = {
   }
 };
 
-import { ThemeProvider } from "./components/ThemeProvider";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html lang="en" className="dark">
       <body className={`${georama.variable} ${robotoMono.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
