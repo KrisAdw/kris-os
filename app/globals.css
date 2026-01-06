@@ -30,6 +30,18 @@ body {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+}
+
 @layer base {
   main {
     @apply w-dvw h-dvh overflow-hidden;
@@ -367,10 +379,10 @@ body {
     }
 
     .preview {
-      @apply p-2 bg-gray-200 max-h-[70vh];
+      @apply p-2 bg-gray-200 max-h-[85vh] overflow-hidden;
 
       img {
-        @apply w-full h-fit object-contain object-center;
+        @apply w-full h-auto object-contain block mx-auto rounded-sm;
       }
     }
   }

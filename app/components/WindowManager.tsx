@@ -1,6 +1,6 @@
 'use client'
 
-import { SafariBrowser, Terminal, Resume, Finder, Text, ImageViewer, Contact } from '../windows'
+import { SafariBrowser, Terminal, Resume, Finder, Text, ImageViewer, Contact, Gallery } from '../windows'
 
 /**
  * WindowManager
@@ -23,6 +23,7 @@ const WindowManager = () => {
             <Text />
             <ImageViewer />
             <Contact />
+            <Gallery />
         </>
     )
 }
