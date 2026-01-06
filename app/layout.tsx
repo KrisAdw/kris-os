@@ -16,10 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html lang="en" className="dark">
       <body className={`${georama.variable} ${robotoMono.variable} antialiased`}>
         {children}
       </body>
     </html>
   );
 }
+

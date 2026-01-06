@@ -7,15 +7,16 @@ import { WindowControls } from "../components"
 const Terminal = () => {
     return <>
         <div id="window-header">
-            <WindowControls target="terminal"/>
+            <WindowControls target="terminal" />
             <h2>Tech Stack</h2>
         </div>
 
-        <div className="techstack">
+        <div className="techstack dark:text-gray-100 transition-colors duration-300">
             <p>
                 <span className="font-bold">@kris % </span>
                 show tech stack
             </p>
+
 
             <div className="label">
                 <p className="w-32">Category</p>
@@ -44,10 +45,11 @@ const Terminal = () => {
                     <span>8 of 8 stacks loaded succesfully (100%)</span>
                 </p>
 
-                <p className="text-black">
-                    <Flag size={15} fill="black"/>
+                <p className="text-black dark:text-gray-200 transition-colors">
+                    <Flag size={15} fill="currentColor" />
                     Render time, 0.5ms
                 </p>
+
             </div>
         </div>
     </>

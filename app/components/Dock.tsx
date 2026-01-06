@@ -1,15 +1,17 @@
 'use client'
 import { useRef } from "react"
-import { dockApps } from "../constants"
+import { dockApps, locations } from "../constants"
 import { Tooltip } from "react-tooltip"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import useWindowStore, { WindowKey } from "../store/window"
+import useLocationStore from "../store/location"
 import Image from "next/image"
 
 const Dock = () => {
   const dockRef = useRef<HTMLDivElement>(null)
   const { openWindow, closeWindow, windows } = useWindowStore()
+  const { setActiveLocation } = useLocationStore()
 
   useGSAP(() => {
     const dock = dockRef.current
@@ -87,6 +89,12 @@ const Dock = () => {
 
   const toggleApp = (app: { id: string; canOpen: boolean }) => {
     if (!app.canOpen) return;
+
+    if (app.id === 'trash') {
+      setActiveLocation(locations.trash)
+      openWindow('finder')
+      return;
+    }
 
     const windowKey = app.id as WindowKey
     const window = windows[windowKey]

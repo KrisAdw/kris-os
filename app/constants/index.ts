@@ -70,7 +70,7 @@ const dockApps = [
     id: "trash",
     name: "Archive", // was "Trash"
     icon: "trash.png",
-    canOpen: false,
+    canOpen: true,
   },
 ];
 
@@ -164,44 +164,48 @@ const photosLinks = [
     icon: "/icons/gicon1.svg",
     title: "Library",
   },
-  {
-    id: 2,
-    icon: "/icons/gicon2.svg",
-    title: "Memories",
-  },
-  {
-    id: 3,
-    icon: "/icons/file.svg",
-    title: "Places",
-  },
-  {
-    id: 4,
-    icon: "/icons/gicon4.svg",
-    title: "People",
-  },
-  {
-    id: 5,
-    icon: "/icons/gicon5.svg",
-    title: "Favorites",
-  },
+  // {
+  //   id: 2,
+  //   icon: "/icons/gicon2.svg",
+  //   title: "Memories",
+  // },
+  // {
+  //   id: 3,
+  //   icon: "/icons/file.svg",
+  //   title: "Places",
+  // },
+  // {
+  //   id: 4,
+  //   icon: "/icons/gicon4.svg",
+  //   title: "People",
+  // },
+  // {
+  //   id: 5,
+  //   icon: "/icons/gicon5.svg",
+  //   title: "Favorites",
+  // },
 ];
 
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/gal1.jpeg",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/gal2.jpeg",
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/images/gal3.jpeg",
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/images/gal4.jpeg",
+  },
+  {
+    id: 5,
+    img: "/images/gal5.jpeg",
   },
 ];
 
@@ -398,25 +402,25 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/kris2.jpeg",
     },
     {
       id: 2,
-      name: "casual-me.png",
+      name: "college-me.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/kris.jpg",
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "ceremony-me.png",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/ceremony.jpeg",
     },
     {
       id: 4,
@@ -425,13 +429,13 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "txt",
       position: "top-60 left-5",
-      subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      subtitle: "I’m Kris. I Build Stuff That Works.",
+      image: "/images/kris3.jpeg",
       description: [
-        "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-        "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-        "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-        "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+        "I’ve always been the person who takes things apart to see how they work. Today, I do that with software.",
+        "As a developer focusing on React and Next.js, I’m obsessed with creating 'delightful' code—the kind that’s so clean and intuitive, it doesn't need a search party to debug.",
+        "I care about code quality, system clarity, and continuous improvement—always learning, refining, and building better solutions with every project.",
+        "When I’m not in dev mode, you’ll usually find me gaming or catching up on One Piece 😊",
       ],
     },
   ],
@@ -470,7 +474,7 @@ const TRASH_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
+      imageUrl: "/images/trash.jpeg",
     },
     {
       id: 2,
@@ -479,7 +483,7 @@ const TRASH_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
+      imageUrl: "/images/trash1.jpeg",
     },
   ],
 };

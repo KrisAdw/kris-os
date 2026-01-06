@@ -1,10 +1,11 @@
-"use client"
+'use client'
 import { navIcons, navLinks } from "../constants"
 import { Clock } from "./index"
 import useWindowStore from "../store/window"
 
 const Navbar = () => {
     const { openWindow } = useWindowStore()
+
     return (
         <nav>
             <div>
@@ -19,10 +20,12 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div>
+            <div className="relative">
                 <ul>
                     {navIcons.map(({ id, img }) => (
-                        <li key={id}>
+                        <li
+                            key={id}
+                        >
                             <img src={img} className="icon-hover" alt={`icon-${id}`} />
                         </li>
                     ))}
