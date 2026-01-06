@@ -19,9 +19,9 @@ const Text = () => {
                     {data.name}
                 </h2>
             </div>
-            <div className="p-8 h-full overflow-y-auto pb-10 text-black bg-white">
+            <div className="p-8 h-full overflow-y-auto pb-10 text-gray-900 dark:text-gray-100 bg-white dark:bg-neutral-900 transition-colors duration-300">
                 {data.image && (
-                    <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden border border-gray-100 shadow-sm">
+                    <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden border border-gray-100 dark:border-neutral-800 shadow-sm">
                         <img
                             src={data.image}
                             alt={data.name}
@@ -31,17 +31,18 @@ const Text = () => {
                 )}
 
                 {data.subtitle && (
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{data.subtitle}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-50">{data.subtitle}</h3>
                 )}
 
                 <div className="space-y-4">
                     {data.description && data.description.map((paragraph: string, index: number) => (
-                        <p key={index} className="text-base leading-7 text-gray-600">
+                        <p key={index} className="text-base leading-7 text-gray-600 dark:text-gray-400">
                             {paragraph}
                         </p>
                     ))}
                 </div>
             </div>
+
         </>
     )
 }

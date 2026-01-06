@@ -1,10 +1,15 @@
-"use client"
+'use client'
+
+import { useState } from "react"
 import { navIcons, navLinks } from "../constants"
 import { Clock } from "./index"
 import useWindowStore from "../store/window"
+import ThemeMenu from "./ThemeMenu"
 
 const Navbar = () => {
     const { openWindow } = useWindowStore()
+    const [showThemeMenu, setShowThemeMenu] = useState(false)
+
     return (
         <nav>
             <div>
@@ -19,15 +24,20 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div>
+            <div className="relative">
                 <ul>
                     {navIcons.map(({ id, img }) => (
-                        <li key={id}>
+                        <li
+                            key={id}
+                            onClick={id === 4 ? () => setShowThemeMenu(!showThemeMenu) : undefined}
+                            className="cursor-pointer"
+                        >
                             <img src={img} className="icon-hover" alt={`icon-${id}`} />
                         </li>
                     ))}
                 </ul>
                 <Clock />
+                {showThemeMenu && <ThemeMenu onClose={() => setShowThemeMenu(false)} />}
             </div>
 
         </nav>

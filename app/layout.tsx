@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   }
 };
 
+import { ThemeProvider } from "./components/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,8 +20,16 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body className={`${georama.variable} ${robotoMono.variable} antialiased`}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
