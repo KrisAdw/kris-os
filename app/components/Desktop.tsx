@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react"
 import { Draggable } from "gsap/all"
 import useWindowStore from "../store/window"
 import useLocationStore, { Location } from "../store/location"
+import Image from "next/image"
 
 const projects = locations.work?.children ?? []
 
@@ -26,7 +27,7 @@ const Desktop = () => {
             <ul>
                 {projects.map((project) => (
                     <li key={project.id} className={clsx("group folder", project.windowPosition)} onClick={() => handleOpenProject(project)}>
-                        <img src="/images/folder.png" alt={project.name} />
+                        <Image src="/images/folder.png" alt={project.name} width={64} height={64} />
                         <p>{project.name}</p>
                     </li>
                 ))}

@@ -38,7 +38,7 @@ const Gallery = () => {
                                 )}
                                 onClick={() => setActiveId(item.id)}
                             >
-                                <img src={item.icon} alt={item.title} />
+                                <Image src={item.icon} alt={item.title} width={16} height={16} />
                                 <p>{item.title}</p>
                             </li>
                         ))}
@@ -47,16 +47,19 @@ const Gallery = () => {
 
                 {/* Content area */}
                 <div className="gallery flex-1 overflow-y-auto scrollbar-hide">
-                    <ul>
+                    <ul className="h-full">
                         {gallery.map((photo, index) => (
                             <li
                                 key={photo.id}
-                                className="cursor-zoom-in"
+                                className="cursor-zoom-in relative"
                                 onClick={() => openImage(photo)}
                             >
-                                <img
+                                <Image
                                     src={photo.img}
                                     alt={`Gallery content ${photo.id}`}
+                                    fill
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
                                 />
                             </li>
                         ))}

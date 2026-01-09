@@ -4,6 +4,7 @@ import { WindowControls } from "../components"
 import WindowWrapper from "../components/hoc/WindowWrapper"
 import useWindowStore from "../store/window"
 import { Location } from "../store/location"
+import Image from "next/image"
 
 const Text = () => {
     const { windows } = useWindowStore()
@@ -22,10 +23,11 @@ const Text = () => {
             <div className="p-8 h-full overflow-y-auto pb-10 text-gray-900 dark:text-gray-100 bg-white dark:bg-neutral-900 transition-colors duration-300">
                 {data.image && (
                     <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden border border-gray-100 dark:border-neutral-800 shadow-sm">
-                        <img
+                        <Image
                             src={data.image}
                             alt={data.name}
-                            className="w-full h-full object-cover object-center"
+                            fill
+                            className="object-cover object-center"
                         />
                     </div>
                 )}
