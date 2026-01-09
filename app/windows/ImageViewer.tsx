@@ -4,6 +4,7 @@ import { WindowControls } from "../components"
 import WindowWrapper from "../components/hoc/WindowWrapper"
 import useWindowStore from "../store/window"
 import { Location } from "../store/location"
+import Image from "next/image"
 
 const ImageViewer = () => {
     const { windows } = useWindowStore()
@@ -22,9 +23,13 @@ const ImageViewer = () => {
 
             <div className="preview">
                 {data.imageUrl && (
-                    <img
+                    <Image
                         src={data.imageUrl}
                         alt={data.name}
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className="w-full h-auto object-contain block mx-auto rounded-sm"
                     />
                 )}
             </div>

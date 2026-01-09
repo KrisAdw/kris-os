@@ -2,6 +2,7 @@ import { Mail } from "lucide-react"
 import { WindowControls } from "../components"
 import WindowWrapper from "../components/hoc/WindowWrapper"
 import { socials } from "../constants"
+import Image from "next/image"
 
 const Contact = () => {
     return (
@@ -12,7 +13,7 @@ const Contact = () => {
             </div>
 
             <div className="p-5 space-y-5 dark:text-gray-100 transition-colors duration-300">
-                <img src="/images/kris.jpg" alt="Kris" className="w-20 rounded-full" />
+                <Image src="/images/kris.jpg" alt="Kris" className="w-20 rounded-full" width={80} height={80} />
 
                 <h3 className="dark:text-white">Let's Connect</h3>
                 <p className="text-justify text-gray-700 dark:text-gray-300">Whether it’s tech, work, or just a "Hi," feel free to reach out. Always happy to expand my network.</p>
@@ -25,7 +26,7 @@ const Contact = () => {
                     {socials.map(({ id, bg, link, icon, text }) => (
                         <li key={id} style={{ backgroundColor: bg }}>
                             <a href={link} target="_blank" rel="noopener noreferrer" title={text}>
-                                <img src={icon} alt={text} className="size-5" />
+                                <Image src={icon} alt={text} className="size-5" width={20} height={20} />
                                 <p>{text}</p>
                             </a>
                         </li>

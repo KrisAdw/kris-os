@@ -274,7 +274,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white dark:bg-neutral-900 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden transition-colors duration-300;
+    @apply w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white dark:bg-neutral-900 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden transition-colors duration-300;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 dark:bg-neutral-800 flex flex-col p-5 transition-colors duration-300;
@@ -414,7 +414,7 @@ body {
 
 
     .preview {
-      @apply p-2  max-h-[85vh] overflow-hidden;
+      @apply p-2 max-h-[85vh] overflow-hidden;
 
       img {
         @apply w-full h-auto object-contain block mx-auto rounded-sm;

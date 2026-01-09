@@ -2,6 +2,7 @@
 import { navIcons, navLinks } from "../constants"
 import { Clock } from "./index"
 import useWindowStore from "../store/window"
+import Image from "next/image"
 
 const Navbar = () => {
     const { openWindow } = useWindowStore()
@@ -9,7 +10,7 @@ const Navbar = () => {
     return (
         <nav>
             <div>
-                <img src="images/logo.svg" alt="Logo" />
+                <Image src="images/logo.svg" alt="Logo" width={24} height={24} />
                 <p className="font-bold">Kris's Portfolio</p>
                 <ul>
                     {navLinks.map(({ id, name, type }) => (
@@ -26,7 +27,7 @@ const Navbar = () => {
                         <li
                             key={id}
                         >
-                            <img src={img} className="icon-hover" alt={`icon-${id}`} />
+                            <Image src={img} className="icon-hover" alt={`icon-${id}`} width={20} height={20} />
                         </li>
                     ))}
                 </ul>
