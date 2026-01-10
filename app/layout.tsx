@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { georama, robotoMono } from "./font";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Kris's Portfolio",
@@ -19,6 +21,8 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${georama.variable} ${robotoMono.variable} antialiased`}>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
