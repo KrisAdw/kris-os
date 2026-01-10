@@ -8,7 +8,7 @@ import 'react-pdf/dist/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const MobileResume = () => {
-    const file = "/Resume.pdf" // Hardcoded for now as per constants
+    const file = "/files/resume.pdf" // Correct path matching desktop
     const [fileSource, setFileSource] = useState<string | null>(null);
     const [width, setWidth] = useState(300);
     const containerRef = useRef<HTMLDivElement>(null);
