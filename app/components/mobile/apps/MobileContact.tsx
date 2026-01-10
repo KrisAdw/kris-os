@@ -7,7 +7,7 @@ const MobileContact = () => {
         <div className="size-full bg-[#1c1c1e] text-white flex flex-col pt-10 px-6 overflow-auto pb-20 items-center">
 
             {/* Profile Section */}
-            <div className="relative size-24 rounded-full overflow-hidden border-2 border-white/20 mb-4 shadow-2xl">
+            <div className="relative size-24 shrink-0 rounded-full overflow-hidden border-2 border-white/20 mb-4 shadow-2xl">
                 <Image src="/images/kris3.jpeg" alt="Kris" fill className="object-cover" />
             </div>
 
