@@ -1,28 +1,47 @@
 # Kris's Portfolio (OS-Style Resume)
 
-A modern, interactive portfolio themed after a desktop operating system. This project showcases my work, skills, and experience through a familiar, intuitive interface.
+A modern, interactive portfolio themed after a desktop operating system. This project showcases my work, skills, and experience through a familiar, intuitive interface that seamlessly adapts between Desktop and Mobile environments.
 
 ## 🌟 Features
 
-- **Interactive Desktop**: A fully functional desktop environment with icons and a Taskbar/Navbar.
-- **Finder (Projects)**: Explore my work through a file-browsing interface. Highlights include:
-  - Nike Ecommerce Website
-  - AI Resume Analyzer
-  - Food Delivery App
-- **Safari (Articles)**: Integrated blog posts and technical guides.
-- **Terminal (Skills)**: A developer-centric view of my technical stack and expertise.
-- **Photos (Gallery)**: A visual showcase of memories and highlights.
-- **Contact & Resume**: Easily accessible links to get in touch or view my professional CV.
-- **Glassmorphism UI**: High-end aesthetic using Tailwind CSS 4 backdrop blurs and semi-transparent layers.
-- **Responsive Design**: Optimized for a premium experience across different devices.
+### 🖥️ Desktop Experience
+- **Interactive Environment**: A fully functional macOS-style desktop with draggable windows, a dock, and a menu bar.
+- **Finder (Projects)**: Browse projects like files in a folder system.
+- **Terminal (Skills)**: Execute commands or view a skills matrix in a developer-friendly interface.
+- **Files Support**: Open TXT, PDF, and Image files directly in custom windows.
+
+### 📱 Mobile Experience
+- **Mobile OS Interface**: A dedicated touch-friendly UI optimized for smaller screens (`< 640px`).
+- **Home Screen**: iOS-inspired launcher with widgets and a navigation dock.
+- **Custom Apps**:
+    - **Contact**: A social hub with large, accessible cards for Quick connections.
+    - **Safari**: A mobile browser experience for reading blog posts.
+    - **Resume Viewer**: Integrated PDF viewer tailored for mobile reading.
+- **Smart Adjustments**: Automatic UI adaptions (e.g., hidden profile photos on small screens for better spacing).
+
+### 🎨 UI & UX
+- **Glassmorphism**: High-end aesthetic using Tailwind CSS 4 backdrop blurs.
+- **Animations**: Powered by **GSAP** for smooth window dragging and complex transitions.
+- **Responsive**: Not just "shrunk down" — a completely separate, optimized layout for mobile users.
+
+## 🏗️ Architecture & Performance
+
+This project uses **Dynamic Imports** to ensure optimal performance across devices.
+
+- **Code Splitting**: The `DesktopLayout` and `MobileLayout` are bundled separately.
+- **Conditional Loading**:
+    - If a user visits on **Mobile**, they download *only* the mobile chunks (avoiding heavy desktop 3D/drag logic).
+    - If a user visits on **Desktop**, they get the full desktop experience.
+    - This is handled in `app/page.tsx` using `next/dynamic` with `{ ssr: false }`.
 
 ## 🛠 Tech Stack
 
 - **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 - **Library**: [React 19](https://react.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Runtime & Package Manager**: [Bun](https://bun.sh/)
+- **Animation**: [GSAP](https://gsap.com/) (GreenSock)
+- **PDF Handling**: [React-PDF](https://github.com/wojtekmaj/react-pdf)
+- **Runtime**: [Bun](https://bun.sh/)
 
 ## 🚀 Getting Started
 
@@ -36,13 +55,11 @@ bun install
 
 ### Development Server
 
-Run the development server:
-
 ```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
 ### Build and Production
 
@@ -57,14 +74,16 @@ bun start
 
 ```text
 ├── app/
-│   ├── components/    # Reusable UI components (Navbar, Clock, etc.)
-│   ├── constants/     # Project data and configurations
-│   ├── globals.css    # Global styles and Tailwind 4 layers
+│   ├── components/
+│   │   ├── mobile/    # 📱 Mobile-specific components (Home, Apps, Layout)
+│   │   ├── DesktopLayout.tsx  # 🖥️ Desktop wrapper
+│   │   └── ...        # Shared/Desktop components
+│   ├── constants/     # Centralized data (Projects, Blogs, Socials)
 │   ├── layout.tsx     # Root layout
-│   └── page.tsx       # Main desktop page
+│   └── page.tsx       # 🔀 Entry point (handles Dynamic Imports)
 ├── public/
-│   ├── icons/         # OS and app icons
-│   └── images/        # Project screenshots and assets
+│   ├── files/         # PDF Resumes and documents
+│   └── icons/         # OS assets
 └── README.md          # Project documentation
 ```
 
